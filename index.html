@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style/main.css" />
+  <title>Fictional University Website</title>
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav>
+    <div class="left">
+        <div class="logo">
+            <img src="assets/LOGO.png">
+        </div>
+        <div class="links">
+            <a href="#home" class="nav-btn" data-target="home">Home</a>
+            <a href="#about" class="nav-btn" data-target="about">About L.I.G.Y.</a>
+            <a href="#courses" class="nav-btn" data-target="courses">Courses</a>
+            <a href="#special" class="nav-btn" data-target="special">Special Courses</a>
+            <a href="#contact" class="nav-btn" data-target="contact">Contact Us</a>
+
+        </div>
+    </div>
+        <div class="buttons">
+  <div class="a">
+    <a href="#" class="Login"><i class='bx bx-log-in'></i> Login</a>
+    <a href="#" class="SignUp"><i class='bx bx-user-plus'></i> Sign Up</a>
+  </div>
+    <div class="user-info" style="display: none;">
+      <span id="welcomeUser" class="profile-trigger"></span>
+      <a href="#" id="profileBtn" class="profile-trigger">Profile</a>
+      <a href="#" id="logoutBtn">Logout</a>
+
+  <!-- Profile Popup Modal -->
+  <div id="profileModal" class="modal">
+  <div class="modal-content">
+    <span class="close-profile">&times;</span>
+    <h2>Your Profile</h2>
+    <form id="profileForm">
+      <input type="password" id="confirmPassword" placeholder="Enter your password to edit" required />
+
+      <div id="editableFields" style="display: none;">
+        <input type="text" id="editUsername" placeholder="Username" />
+        <input type="email" id="editEmail" placeholder="Email" />
+        <input type="text" id="editFullName" placeholder="Full Name" />
+        <input type="text" id="editEducation" placeholder="Educational Background" />
+        <input type="text" id="editPassword" placeholder="New Password" />
+        <button type="submit">Save Changes</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+</div>
+
+    </nav>
+    <!-- Auth Modal -->
+<div id="authModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <div id="container" class="container">
+      
+      <!-- Sign In Form -->
+      <div class="form-container sign-in">
+        <form>
+          <h2>Sign In</h2>
+          <input type="text" placeholder="Username" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+      <!-- Sign Up Form -->
+      <div class="form-container sign-up">
+        <form>
+          <h2>Create Account</h2>
+          <input type="text" placeholder="Username" required />
+          <input type="email" placeholder="Email" required />
+          <input type="text" placeholder="Full Name" required />
+          <input type="text" placeholder="Educational Background" required />
+          <input type="password" placeholder="Password" required />
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+
+      <!-- Toggle Panels -->
+      <div class="toggle-container">
+        <div class="toggle">
+          
+          <div class="toggle-panel toggle-left">
+            <h2>Welcome Back!</h2>
+            <p>To keep connected, please login with your personal info</p>
+            <button class="hidden" id="login">Sign In</button>
+          </div>
+
+          <div class="toggle-panel toggle-right">
+            <h2>Hello, Friend!</h2>
+            <p>Enter your details and start your journey with us</p>
+            <button class="hidden" id="register">Sign Up</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <!-- Header Section -->
+<header id="home" class="page active">
+    <div class="logo1">
+            <img src="assets/LOGO.png">
+        </div>
+    <div class="header-content">  
+        <h1>Welcome to L.I.G.Y. University</h1>
+        <p>Your journey to excellence starts here.</p>
+      
+        <button class="courses" >See Courses</button>
+        <button class="aboutus" >Learn More</button>
+    </div>
+    <div>
+
+    </div>
+</header>
+  <!-- Section Section -->
+<section class="info-section">
+  <div class="info-card">
+    <i class='bx bxs-graduation'></i>
+    <h3>History</h3>
+    <p>Learn from industry leaders and experienced educators.</p>
+    <button class="toggle-btn" data-target="history-info">More Info</button>
+    <div class="history-info">
+      <p> Founded in 1969, the university began as a modest technical institute with a bold mission: to make engineering and applied sciences accessible to all. At the heart of this vision was Timothy Stephen M. Lontac, a pioneering educator and systems thinker whose belief in community-driven innovation shaped the school’s earliest programs. </p>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <i class='bx bxs-book'></i>
+    <h3>Campus Life</h3>
+    <p>Courses designed to equip you with in-demand skills.</p>
+    <button class="toggle-btn" data-target="campuslife-info">More Info</button>
+    <div class="campuslife-info">
+      <p>Campus life at the university is vibrant, collaborative, and deeply student-driven. From tech clubs and cultural organizations to weekend hackathons and community outreach, students find countless ways to connect and grow beyond the classroom. It's not just where you study — it's where you belong.</p>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <i class='bx bx-pin'></i>
+    <h3>Mission</h3>
+    <p class="summary">Connect with a worldwide network of professionals.</p>
+    <button class="toggle-btn" data-target="mission-info">More Info</button>
+    <div class="mission-info">
+      <p>We aim to deliver transformative education that empowers students to lead, innovate, and serve in a global context.</p>
+    </div>
+  </div>
+
+  <div class="info-card">
+    <i class='bx bx-bullseye'></i>
+    <h3>Vision</h3>
+    <p class="summary">Flexible learning options fit for your busy schedule.</p>
+    <button class="toggle-btn" data-target="vision-info">More Info</button>
+    <div class="vision-info">
+      <p>To be a premier institution recognized across ASEAN for excellence in engineering, technology, and inclusive education.</p>
+    </div>
+  </div>
+</section>
+
+<section id="courses" class="courses-section">
+  <h2>Courses Offered by the Colleges of L.I.G.Y.</h2>
+  <div class="college-grid">
+
+    <div class="college-card">
+      <i class='bx  bx-mouse-alt'  ></i> 
+      <h3>Computer Studies</h3>
+      <p>Head: Sean Anakin Coquia</p>
+      <button onclick="openCollegeWindow('computer')">View Courses</button>
+    </div>
+
+    <div class="college-card">
+      <i class='bx  bx-briefcase-alt-2'  ></i> 
+      <h3>Business / Management</h3>
+      <p>Head: Marcus Marcaida</p>
+      <button onclick="openCollegeWindow('business')">View Courses</button>
+    </div>
+
+    <div class="college-card">
+      <i class='bx  bx-cog'  ></i> 
+      <h3>Engineering</h3>
+      <p>Head: Daniel Gulla</p>
+      <button onclick="openCollegeWindow('engineering')">View Courses</button>
+    </div>
+
+    <div class="college-card">
+      <i class='bx  bx-book-bookmark'  ></i> 
+      <h3>Education</h3>
+      <p>Principal: Timothy Lontac</p>
+      <button onclick="openCollegeWindow('education')">View Courses</button>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="page">
+  <h2>About L.I.G.Y.</h2>
+  <p>
+    Founded in 1969, L.I.G.Y. University has grown into a beacon of inclusive education and technological innovation across Southeast Asia. Our campus is more than just a place of learning — it's a living ecosystem of creativity, collaboration, and excellence.
+  </p>
+  <p>
+    Nestled in the heart of Quezon City, our facilities include state-of-the-art laboratories, immersive simulation halls, and open-access maker spaces designed for hands-on experimentation. Students gather in our glass-walled library, where natural light meets digital archives, and ideas flow freely across disciplines.
+  </p>
+  <p>
+    At L.I.G.Y., we believe brilliance thrives in diversity. Our community is built on mutual respect, curiosity, and a shared drive to push boundaries. Whether you're coding in our AI incubator, debating ethics in our amphitheater, or sketching prototypes in the design studio — you're part of a culture that values both rigor and imagination.
+  </p>
+  <p>
+    We’re not just preparing students for the future — we’re empowering them to shape it. With a faculty of thought leaders and a student body of changemakers, L.I.G.Y. is where gifted minds find their voice, and their purpose.
+  </p>
+  <button class="nav-btn" data-target="home">Back to Home</button>
+</section>
+
+<section id="special" class="page">
+  <h2>Special Courses</h2>
+  <ul>
+    <li>
+      <strong>Certificate in Data Analytics</strong><br>
+      Learn to interpret complex datasets using Python, SQL, and Tableau. Ideal for professionals in business, healthcare, and education.<br>
+      <em>Requirements:</em> Bachelor's degree or equivalent experience in statistics or IT.
+    </li>
+    <li>
+      <strong>Diploma in Inclusive Education</strong><br>
+      Explore adaptive teaching strategies, neurodiversity, and policy frameworks for inclusive classrooms.<br>
+      <em>Requirements:</em> Background in education, psychology, or social work.
+    </li>
+    <li>
+      <strong>Advanced Web Dev Bootcamp</strong><br>
+      Master full-stack development with React, Node.js, and scalable architecture. Includes capstone project and portfolio review.<br>
+      <em>Requirements:</em> Prior experience with HTML, CSS, and JavaScript.
+    </li>
+  </ul>
+  <button class="nav-btn special-btn" data-target="home">Back to Home</button>
+</section>
+
+<section id="contact" class="page">
+  <h2>Contact Us</h2>
+  <p>We’d love to hear from you. Whether you're a prospective student, parent, or partner institution, our team is here to help.</p>
+  <ul>
+    <li><strong>Email:</strong> admissions@ligy.edu.ph</li>
+    <li><strong>Phone:</strong> +63 2 8123 4567</li>
+    <li><strong>Campus Address:</strong> L.I.G.Y. University, Commonwealth Ave, Quezon City</li>
+    <li><strong>Office Hours:</strong> Monday to Friday, 9:00 AM – 5:00 PM</li>
+  </ul>
+  <p>Follow us on social media for updates, student features, and upcoming events.</p>
+  <button class="nav-btn contact-btn" data-target="home">Back to Home</button>
+</section>
+
+
+<script>
+  document.querySelectorAll(".nav-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const target = btn.getAttribute("data-target");
+      document.querySelectorAll(".page").forEach(page => {
+        page.classList.remove("active");
+      });
+      document.getElementById(target).classList.add("active");
+      window.scrollTo(0, 0);
+    });
+  });
+</script>
+
+<script src="scripts/app.js"></script>
+</body>
+</html>
